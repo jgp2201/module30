@@ -1,0 +1,78 @@
+Q1) What is a Database? Explain with an example on why should we need a database?
+Ans. A database is an organized collection of data that can be easily accessed, managed, and updated. Databases store information in tables, which consist of rows and columns.
+     We need database because lets suppose you run an online store with thousands of products. Each product has attributes like name, price, and quantity.
+     Without a database, managing this information would be chaotic and error-prone. Using a database allows you to efficiently store, search, and update product details, 
+     track inventory, process orders, and generate reports. This organization and efficiency are essential for scaling operations and ensuring data integrity.
+
+Q2) Write a short note on File-based storage system. Explain the major challenges of a File-based storage system.
+Ans. A file-based storage system is a method of storing data where files are organized in directories and subdirectories. In this system, data is stored in individual files, 
+     and accessing or managing the data typically involves navigating through the file structure.
+     Major challenges are :-
+     i) Data redundancy: Multiple copies of the same data can exist, leading to increased storage requirements and potential inconsistencies.
+    ii) Data integrity: Maintaining data consistency across different files is difficult without a centralized control mechanism.
+   iii) Concurrency Control: Managing multiple users accessing or modifying files simultaneously can lead to conflicts and data corruption.
+    iv) Scalability: As the volume of data grows, file-based systems become increasingly difficult to manage, with slower performance and more complex file management.
+
+Q3) What is DBMS? What was the need for DBMS?
+Ans. A Database Management System (DBMS) is a management system that interacts with databases, that helps users to create, retrieve, update, and manage data. 
+     A DBMS ensures that data is consistently organized and remains easily accessible.
+     
+     There was a need for DBMS for data redundancy control, data integrity, concurrency control, security and Data Management.
+
+Q4) Explain the challenges of a file-based storage system that were tackled by DBMS.
+Ans. The key challenges of file-based storage systems that DBMS addressed are:
+
+    i) Data Redundancy: DBMS uses normalization and relational models to minimize redundant data.
+   ii) Data Integrity: DBMS ensures that data integrity rules (like constraints and validations) are enforced consistently.
+  iii) Concurrency Issues: DBMS provides transaction management features like locking, which allows multiple users to work with the database simultaneously without conflicts.
+   iv) Security: DBMS has built-in access control mechanisms that manage who can see or modify data.
+    v) Scalability: DBMS is designed to handle large amounts of data efficiently, with indexing and query optimization techniques.
+
+Q5)  List out the different types of classification in DBMS and explain them in depth.
+Ans. The various type of classification in DBMS are:-
+	i) Data Model: a)Relational DBMS: Uses tables to store data, with relationships defined between them. SQL is commonly used.
+		       b)Hierarchical DBMS: Data is organized in a tree-like structure with parent-child relationships.
+		       c)Network DBMS: Similar to hierarchical, but allows multiple parent-child relationships, forming a graph.
+		       d)Object-oriented DBMS: Data is stored in objects, similar to object-oriented programming concepts.
+		       e)NoSQL DBMS: Designed for large-scale data storage and for unstructured data like documents or key-value pairs.
+
+       ii)Number of Users:
+		       a)Single-user DBMS: Designed for one user at a time (e.g., desktop databases).
+		       b)Multi-user DBMS: Allows multiple users to access the database simultaneously (e.g., enterprise databases).
+
+      iii)Architecture:
+		       a)Centralized DBMS: Data is stored and managed in a single location.
+		       b)Distributed DBMS: Data is distributed across multiple locations, and the system manages it as a single database.
+		       c)Client-Server DBMS: Separates the database system (server) from the user interface (client).
+
+Q6) What is the significance of Data Modeling and explain the types of data modeling?
+Ans. Data modeling is the process of creating a visual representation of a complex data system. It helps in defining the structure, relationships, and constraints of the 
+     data within a system, providing a blueprint for database design.
+
+    Types of Data Modeling:
+
+	i) Conceptual Data Model: Provides a high-level overview of the data, focusing on the entities and relationships without going into detail about how the data will be stored.
+	   Used for communication with stakeholders to understand requirements.
+
+       ii) Logical Data Model: Builds on the conceptual model by defining the structure of the data elements, their relationships, and the rules governing these relationships. 
+	   It is technology-agnostic and focuses on the how rather than the where.
+
+      iii) Physical Data Model: Maps the logical model to the physical storage of data, defining how data will be stored in the database, including tables, indexes, and partitioning. 
+	   It is concerned with optimization and implementation.
+
+Q7) Explain 3-schema architecture along with its advantages.
+Ans. The 3-schema architecture is a framework used to separate the user's view of the database from the physical structure. It consists of three levels:
+
+	i) External Schema (View Level): This level defines how individual users or user groups view the data. Each user sees a personalized view of the database,
+	   tailored to their specific needs.
+
+       ii) Conceptual Schema (Logical Level): Represents the entire database's logical structure as seen by the DBMS. It includes entities, relationships, and constraints,
+           independent of physical storage details.
+
+      iii) Internal Schema (Physical Level): Deals with the physical storage of data on hardware. It describes how data is stored, indexed, and retrieved.
+
+	Advantages:
+
+	i)Data Independence: Changes in the internal schema do not affect the conceptual schema, and changes in the conceptual schema do not affect the external schema.
+       ii)Simplified Design: By separating concerns, each level can be designed independently, simplifying complex database design and management.
+      iii)Security: The architecture allows for different levels of access control, ensuring users only see and interact with the data they are authorized to access.
